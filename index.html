@@ -6,10 +6,12 @@
 
 <title>BIO CỦA FFVN.TGM 🔥</title>
 
+<!-- FONT CHUYÊN NGHIỆP -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
 
 <style>
 
@@ -24,7 +26,8 @@
     -webkit-tap-highlight-color:transparent;
 }
 
-html,body{
+html,
+body{
     width:100%;
     min-height:100%;
 }
@@ -58,6 +61,7 @@ body{
     background-repeat:no-repeat;
 
     opacity:0;
+
     transform:scale(1.08);
 
     transition:
@@ -81,6 +85,17 @@ body{
             rgba(0,0,0,.80)
         ),
         url("https://cdn.wildflamestudio.com/common/web_event/official2/dist/client/img/full_logo.969f536.png");
+}
+
+/* BACKGROUND 3 */
+
+.bg3{
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.38),
+            rgba(0,0,0,.78)
+        ),
+        url("https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20264/417b1a4c151c7fcf2afb73afeaaefa16.jpg");
 }
 
 .bg.active{
@@ -175,12 +190,21 @@ body{
     visibility:hidden;
 }
 
+
+/* =====================================================
+   LOADING LOGO 3D
+===================================================== */
+
 .loading-logo{
+
     width:150px;
     height:150px;
 
     object-fit:cover;
+
     border-radius:50%;
+
+    border:2px solid rgba(255,255,255,.8);
 
     box-shadow:
         0 0 15px rgba(255,70,0,.8),
@@ -231,6 +255,11 @@ body{
         filter:brightness(1.35);
     }
 }
+
+
+/* =====================================================
+   LOADING TITLE
+===================================================== */
 
 .loading-title{
 
@@ -289,17 +318,25 @@ body{
 }
 
 .progress-text{
+
     font-family:'Orbitron',sans-serif;
+
     font-size:13px;
+
     letter-spacing:2px;
+
     margin-bottom:10px;
+
+    color:#fff;
 }
 
 .progress-bar{
+
     width:100%;
     height:7px;
 
     overflow:hidden;
+
     border-radius:50px;
 
     background:rgba(255,255,255,.12);
@@ -312,6 +349,7 @@ body{
 }
 
 .progress{
+
     width:0%;
     height:100%;
 
@@ -338,16 +376,20 @@ body{
 ===================================================== */
 
 .main{
+
     min-height:100vh;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     padding:30px 16px;
 }
 
 .bio{
+
     width:min(520px,100%);
 
     text-align:center;
@@ -366,6 +408,7 @@ body{
     border:1px solid rgba(255,255,255,.15);
 
     backdrop-filter:blur(18px);
+
     -webkit-backdrop-filter:blur(18px);
 
     box-shadow:
@@ -410,6 +453,7 @@ body{
     height:115px;
 
     object-fit:cover;
+
     border-radius:50%;
 
     border:3px solid rgba(255,255,255,.9);
@@ -419,8 +463,7 @@ body{
         0 0 30px rgba(255,70,0,.8),
         0 0 70px rgba(255,70,0,.35);
 
-    animation:
-        profileFloat 4s ease-in-out infinite;
+    animation:profileFloat 4s ease-in-out infinite;
 }
 
 @keyframes profileFloat{
@@ -482,6 +525,11 @@ body{
     }
 }
 
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
 .subtitle{
 
     margin-top:9px;
@@ -514,6 +562,7 @@ body{
 .info-card{
 
     display:flex;
+
     align-items:center;
 
     padding:12px;
@@ -537,7 +586,10 @@ body{
         inset 0 1px rgba(255,255,255,.08),
         0 7px 20px rgba(0,0,0,.25);
 
-    transition:.25s ease;
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
 }
 
 .info-card:hover{
@@ -560,6 +612,7 @@ body{
     min-width:38px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -575,6 +628,13 @@ body{
         );
 
     font-size:17px;
+
+    box-shadow:
+        0 0 15px rgba(255,70,0,.3);
+}
+
+.info-text{
+    min-width:0;
 }
 
 .info-label{
@@ -590,10 +650,6 @@ body{
     color:rgba(255,255,255,.48);
 
     margin-bottom:4px;
-}
-
-.info-text{
-    min-width:0;
 }
 
 .info-text strong{
@@ -621,6 +677,7 @@ body{
 .separator{
 
     display:flex;
+
     align-items:center;
 
     gap:10px;
@@ -665,32 +722,36 @@ body{
         );
 }
 
+
+/* =====================================================
+   LINKS
+===================================================== */
+
 .links{
 
     display:flex;
+
     flex-direction:column;
 
     gap:13px;
 }
-
-
-/* =====================================================
-   LINK CARD
-===================================================== */
 
 .link{
 
     position:relative;
 
     display:flex;
+
     align-items:center;
 
     width:100%;
+
     min-height:68px;
 
     padding:10px 15px;
 
     text-decoration:none;
+
     color:#fff;
 
     border-radius:17px;
@@ -709,7 +770,11 @@ body{
     box-shadow:
         0 8px 25px rgba(0,0,0,.28);
 
-    transition:.25s ease;
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
 }
 
 .link::before{
@@ -768,7 +833,7 @@ body{
 
 
 /* =====================================================
-   ⭐ LOGO ZALO CHUẨN
+   ZALO ICON
 ===================================================== */
 
 .zalo-icon{
@@ -779,6 +844,7 @@ body{
     min-width:45px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -824,7 +890,7 @@ body{
 
 
 /* =====================================================
-   CUSTOM ICON WEBSITE
+   WEBSITE ICON
 ===================================================== */
 
 .custom-icon{
@@ -840,7 +906,8 @@ body{
 
     margin-right:13px;
 
-    border:1px solid rgba(255,255,255,.18);
+    border:
+        1px solid rgba(255,255,255,.18);
 
     box-shadow:
         0 5px 15px rgba(0,0,0,.35),
@@ -875,6 +942,7 @@ body{
     min-width:45px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -897,7 +965,7 @@ body{
 
 
 /* =====================================================
-   TEXT
+   LINK TEXT
 ===================================================== */
 
 .link-text{
@@ -933,14 +1001,18 @@ body{
 
     font-size:22px;
 
-    color:rgba(255,255,255,.45);
+    color:
+        rgba(255,255,255,.45);
 
-    transition:.25s ease;
+    transition:
+        transform .25s ease,
+        color .25s ease;
 }
 
 .link:hover .arrow{
 
-    transform:translateX(4px);
+    transform:
+        translateX(4px);
 
     color:#ff6827;
 }
@@ -960,7 +1032,8 @@ body{
 
     letter-spacing:2px;
 
-    color:rgba(255,255,255,.4);
+    color:
+        rgba(255,255,255,.4);
 }
 
 .footer span{
@@ -975,6 +1048,7 @@ body{
 .particles{
 
     position:fixed;
+
     inset:0;
 
     z-index:-2;
@@ -1005,199 +1079,15 @@ body{
 @keyframes particleMove{
 
     from{
-        transform:translateY(110vh);
+        transform:
+            translateY(110vh);
     }
 
     to{
-        transform:translateY(-10vh);
+        transform:
+            translateY(-10vh);
     }
-}
 
-
-/* =====================================================
-   TEST BUTTON
-===================================================== */
-
-.test-button{
-
-    position:fixed;
-
-    right:15px;
-    bottom:15px;
-
-    z-index:5000;
-
-    width:52px;
-    height:52px;
-
-    border:none;
-
-    border-radius:50%;
-
-    cursor:pointer;
-
-    color:#fff;
-
-    font-size:20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff5a16,
-            #ff2100
-        );
-
-    box-shadow:
-        0 5px 25px rgba(255,60,0,.45);
-
-    transition:.25s ease;
-}
-
-.test-button:hover{
-    transform:scale(1.1);
-}
-
-
-/* =====================================================
-   TEST PANEL
-===================================================== */
-
-.test-panel{
-
-    position:fixed;
-
-    right:15px;
-    bottom:78px;
-
-    z-index:4999;
-
-    width:min(330px,calc(100vw - 30px));
-
-    padding:18px;
-
-    border-radius:20px;
-
-    background:
-        rgba(10,10,10,.94);
-
-    border:
-        1px solid rgba(255,255,255,.14);
-
-    backdrop-filter:blur(20px);
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.65);
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transform:
-        translateY(15px)
-        scale(.95);
-
-    transition:.25s ease;
-}
-
-.test-panel.show{
-
-    opacity:1;
-    visibility:visible;
-
-    transform:
-        translateY(0)
-        scale(1);
-}
-
-.test-title{
-
-    font-family:'Orbitron',sans-serif;
-
-    font-size:14px;
-
-    font-weight:800;
-
-    color:#ff6827;
-
-    margin-bottom:15px;
-}
-
-.test-group{
-    margin-bottom:12px;
-}
-
-.test-group label{
-
-    display:block;
-
-    margin-bottom:5px;
-
-    font-size:10px;
-
-    color:rgba(255,255,255,.55);
-
-    font-weight:700;
-}
-
-.test-group input,
-.test-group select{
-
-    width:100%;
-
-    padding:10px 11px;
-
-    border:none;
-    outline:none;
-
-    border-radius:10px;
-
-    color:#fff;
-
-    background:
-        rgba(255,255,255,.09);
-
-    border:
-        1px solid rgba(255,255,255,.1);
-
-    font-family:'Be Vietnam Pro',sans-serif;
-}
-
-.test-actions{
-
-    display:flex;
-    gap:8px;
-
-    margin-top:15px;
-}
-
-.test-actions button{
-
-    flex:1;
-
-    padding:10px;
-
-    border:none;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    color:#fff;
-
-    font-weight:800;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff5a16,
-            #ff2100
-        );
-}
-
-.test-actions button.reset{
-
-    background:
-        rgba(255,255,255,.1);
 }
 
 
@@ -1217,13 +1107,18 @@ body{
     }
 
     .profile-logo{
+
         width:100px;
         height:100px;
+
     }
 
     .link{
+
         min-height:64px;
+
         padding:9px 12px;
+
     }
 
     .zalo-icon,
@@ -1236,6 +1131,7 @@ body{
         min-width:42px;
 
         margin-right:10px;
+
     }
 
     .zalo-icon img{
@@ -1268,6 +1164,7 @@ body{
         margin-right:7px;
 
         font-size:15px;
+
     }
 
     .info-text strong{
@@ -1288,10 +1185,11 @@ body{
 
 
 <!-- =====================================================
-     LOADING
+     LOADING SCREEN
 ===================================================== -->
 
 <div class="loader" id="loader">
+
 
     <img
         class="loading-logo"
@@ -1299,45 +1197,73 @@ body{
         alt="FFVN.TGM"
     >
 
+
     <div class="loading-title">
-        FFVN.TGM <span>🔥</span>
+
+        FFVN.TGM
+        <span>🔥</span>
+
     </div>
+
 
     <div class="progress-box">
 
+
         <div class="progress-text">
+
             ĐANG KHỞI ĐỘNG...
             <span id="percent">1%</span>
+
         </div>
 
+
         <div class="progress-bar">
+
             <div
                 class="progress"
                 id="progress">
             </div>
+
         </div>
 
+
     </div>
+
 
 </div>
 
 
 <!-- =====================================================
-     BACKGROUND
+     BACKGROUNDS
 ===================================================== -->
 
 <div class="background">
 
+    <!-- BACKGROUND 1 -->
+
     <div class="bg bg1 active"></div>
+
+
+    <!-- BACKGROUND 2 -->
+
     <div class="bg bg2"></div>
+
+
+    <!-- BACKGROUND 3 -->
+
+    <div class="bg bg3"></div>
 
 </div>
 
+
 <div class="overlay"></div>
+
 <div class="light"></div>
 
 
-<!-- PARTICLES -->
+<!-- =====================================================
+     PARTICLES
+===================================================== -->
 
 <div
     class="particles"
@@ -1346,15 +1272,16 @@ body{
 
 
 <!-- =====================================================
-     BIO
+     MAIN BIO
 ===================================================== -->
 
 <main class="main">
 
+
 <section class="bio">
 
 
-    <!-- LOGO -->
+    <!-- PROFILE LOGO -->
 
     <img
         class="profile-logo"
@@ -1366,66 +1293,88 @@ body{
     <!-- TITLE -->
 
     <h1 class="bio-title">
+
         BIO CỦA FFVN.TGM 🔥
+
     </h1>
 
 
     <!-- SUBTITLE -->
 
     <p class="subtitle">
+
         FREE FIRE VIỆT NAM
         • COMMUNITY
         • EVENT
         • UPDATE
+
     </p>
 
 
     <!-- =================================================
-         GAME INFO
+         NICKNAME + UID
     ================================================== -->
 
     <div class="game-info">
 
+
+        <!-- NICKNAME -->
+
         <div class="info-card">
+
 
             <div class="info-icon">
                 👤
             </div>
 
+
             <div class="info-text">
+
 
                 <span class="info-label">
                     NICKNAME
                 </span>
 
-                <strong id="nickname">
+
+                <strong>
                     FFVN.TGM
                 </strong>
 
+
             </div>
+
 
         </div>
 
 
+        <!-- UID -->
+
         <div class="info-card">
+
 
             <div class="info-icon">
                 🆔
             </div>
 
+
             <div class="info-text">
+
 
                 <span class="info-label">
                     UID GAME
                 </span>
 
-                <strong id="uid">
+
+                <strong>
                     12334445856
                 </strong>
 
+
             </div>
 
+
         </div>
+
 
     </div>
 
@@ -1435,7 +1384,9 @@ body{
     ================================================== -->
 
     <div class="separator">
+
         DANH SÁCH
+
     </div>
 
 
@@ -1443,7 +1394,7 @@ body{
 
 
         <!-- =================================================
-             ZALO - THÔNG BÁO
+             ZALO - THÔNG BÁO FF
         ================================================== -->
 
         <a
@@ -1453,38 +1404,51 @@ body{
             rel="noopener noreferrer"
         >
 
+
             <div class="zalo-icon">
+
 
                 <img
                     src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Icon_of_Zalo.svg"
                     alt="Zalo"
                 >
 
+
             </div>
 
 
             <div class="link-text">
 
+
                 <span class="link-title">
+
                     NHÓM THÔNG BÁO FF
+
                 </span>
 
+
                 <span class="link-description">
+
                     Nhận thông báo & tin tức Free Fire
+
                 </span>
+
 
             </div>
 
 
             <div class="arrow">
+
                 ›
+
             </div>
+
 
         </a>
 
 
         <!-- =================================================
-             ZALO - CHAT
+             ZALO - CHAT FF
         ================================================== -->
 
         <a
@@ -1494,32 +1458,45 @@ body{
             rel="noopener noreferrer"
         >
 
+
             <div class="zalo-icon">
+
 
                 <img
                     src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Icon_of_Zalo.svg"
                     alt="Zalo"
                 >
 
+
             </div>
 
 
             <div class="link-text">
 
+
                 <span class="link-title">
+
                     NHÓM CHAT FF
+
                 </span>
 
+
                 <span class="link-description">
+
                     Giao lưu & trò chuyện cùng cộng đồng
+
                 </span>
+
 
             </div>
 
 
             <div class="arrow">
+
                 ›
+
             </div>
+
 
         </a>
 
@@ -1535,25 +1512,40 @@ body{
             rel="noopener noreferrer"
         >
 
+
             <div class="icon messenger">
+
                 💬
+
             </div>
+
 
             <div class="link-text">
 
+
                 <span class="link-title">
+
                     NHÓM EVENT UPDATE
+
                 </span>
+
 
                 <span class="link-description">
+
                     Event & Update Free Fire
+
                 </span>
 
+
             </div>
 
+
             <div class="arrow">
+
                 ›
+
             </div>
+
 
         </a>
 
@@ -1569,33 +1561,46 @@ body{
             rel="noopener noreferrer"
         >
 
+
             <img
                 class="custom-icon"
                 src="https://cdn.phototourl.com/free/2026-09-01-9e8750dc-2023-4879-8851-028b20c60730.jpg"
                 alt="Arexnetwork.vn"
             >
 
+
             <div class="link-text">
 
+
                 <span class="link-title">
+
                     AREXNETWORK.VN
+
                 </span>
+
 
                 <span class="link-description">
+
                     Website Arexnetwork.vn
+
                 </span>
 
+
             </div>
 
+
             <div class="arrow">
+
                 ›
+
             </div>
+
 
         </a>
 
 
         <!-- =================================================
-             NHÀ SÁNG TẠO
+             NHÀ SÁNG TẠO FREE FIRE
         ================================================== -->
 
         <a
@@ -1605,27 +1610,40 @@ body{
             rel="noopener noreferrer"
         >
 
+
             <img
                 class="custom-icon"
                 src="https://dl.dir.freefiremobile.com/common/OB44/VN/WebUGC/Partner.jpg"
                 alt="Nhà Sáng Tạo Free Fire"
             >
 
+
             <div class="link-text">
 
+
                 <span class="link-title">
+
                     NHASANGTAO.FF.GARENA.VN
+
                 </span>
+
 
                 <span class="link-description">
+
                     Cổng thông tin Nhà Sáng Tạo Free Fire
+
                 </span>
 
+
             </div>
 
+
             <div class="arrow">
+
                 ›
+
             </div>
+
 
         </a>
 
@@ -1633,7 +1651,9 @@ body{
     </div>
 
 
-    <!-- FOOTER -->
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
 
     <div class="footer">
 
@@ -1642,117 +1662,17 @@ body{
 
     </div>
 
+
 </section>
 
+
 </main>
-
-
-<!-- =====================================================
-     TEST BUTTON
-===================================================== -->
-
-<button
-    class="test-button"
-    id="testButton"
-    title="Mở chế độ test"
->
-    🛠️
-</button>
-
-
-<!-- =====================================================
-     TEST PANEL
-===================================================== -->
-
-<div
-    class="test-panel"
-    id="testPanel"
->
-
-    <div class="test-title">
-        🛠️ BIO TEST MODE
-    </div>
-
-
-    <div class="test-group">
-
-        <label>
-            NICKNAME
-        </label>
-
-        <input
-            id="testNickname"
-            type="text"
-            value="FFVN.TGM"
-            maxlength="30"
-        >
-
-    </div>
-
-
-    <div class="test-group">
-
-        <label>
-            UID GAME
-        </label>
-
-        <input
-            id="testUID"
-            type="text"
-            value="12334445856"
-            maxlength="20"
-        >
-
-    </div>
-
-
-    <div class="test-group">
-
-        <label>
-            TỐC ĐỘ BACKGROUND
-        </label>
-
-        <select id="testSpeed">
-
-            <option value="3000">
-                3 giây
-            </option>
-
-            <option value="6000" selected>
-                6 giây
-            </option>
-
-            <option value="10000">
-                10 giây
-            </option>
-
-        </select>
-
-    </div>
-
-
-    <div class="test-actions">
-
-        <button id="applyTest">
-            ÁP DỤNG
-        </button>
-
-        <button
-            class="reset"
-            id="resetTest"
-        >
-            RESET
-        </button>
-
-    </div>
-
-</div>
 
 
 <script>
 
 /* =====================================================
-   LOADING
+   LOADING 1% → 100%
 ===================================================== */
 
 let progress = 1;
@@ -1769,10 +1689,13 @@ const loader =
 
 const loadingTimer = setInterval(() => {
 
+
     progress++;
+
 
     progressBar.style.width =
         progress + "%";
+
 
     percent.textContent =
         progress + "%";
@@ -1780,63 +1703,61 @@ const loadingTimer = setInterval(() => {
 
     if(progress >= 100){
 
+
         clearInterval(loadingTimer);
+
 
         setTimeout(() => {
 
+
             loader.classList.add("hide");
+
 
         },500);
 
+
     }
+
 
 },30);
 
 
 /* =====================================================
-   BACKGROUND
+   BACKGROUND TỰ ĐỘNG 6 GIÂY
 ===================================================== */
 
 const backgrounds =
     document.querySelectorAll(".bg");
 
+
 let currentBackground = 0;
 
-let backgroundSpeed = 6000;
 
-let backgroundTimer;
-
-
-function startBackground(){
-
-    clearInterval(backgroundTimer);
-
-    backgroundTimer = setInterval(() => {
-
-        backgrounds[currentBackground]
-            .classList.remove("active");
+setInterval(() => {
 
 
-        currentBackground++;
-
-        if(
-            currentBackground >=
-            backgrounds.length
-        ){
-
-            currentBackground = 0;
-
-        }
+    backgrounds[currentBackground]
+        .classList.remove("active");
 
 
-        backgrounds[currentBackground]
-            .classList.add("active");
+    currentBackground++;
 
-    },backgroundSpeed);
 
-}
+    if(
+        currentBackground >=
+        backgrounds.length
+    ){
 
-startBackground();
+        currentBackground = 0;
+
+    }
+
+
+    backgrounds[currentBackground]
+        .classList.add("active");
+
+
+},6000);
 
 
 /* =====================================================
@@ -1849,160 +1770,40 @@ const particles =
 
 for(let i = 0; i < 35; i++){
 
+
     const particle =
         document.createElement("div");
+
 
     particle.className =
         "particle";
 
+
     particle.style.left =
         Math.random() * 100 + "%";
+
 
     particle.style.animationDuration =
         (5 + Math.random() * 10) + "s";
 
+
     particle.style.animationDelay =
         (-Math.random() * 10) + "s";
 
+
     particle.style.opacity =
         (0.15 + Math.random() * 0.5);
+
 
     particles.appendChild(
         particle
     );
 
+
 }
-
-
-/* =====================================================
-   TEST MODE
-===================================================== */
-
-const testButton =
-    document.getElementById("testButton");
-
-const testPanel =
-    document.getElementById("testPanel");
-
-
-testButton.addEventListener(
-    "click",
-    () => {
-
-        testPanel.classList.toggle("show");
-
-    }
-);
-
-
-/* =====================================================
-   APPLY TEST
-===================================================== */
-
-document
-    .getElementById("applyTest")
-    .addEventListener("click", () => {
-
-
-        const nickname =
-            document
-            .getElementById("testNickname")
-            .value
-            .trim();
-
-
-        const uid =
-            document
-            .getElementById("testUID")
-            .value
-            .trim();
-
-
-        const speed =
-            Number(
-                document
-                .getElementById("testSpeed")
-                .value
-            );
-
-
-        if(nickname){
-
-            document
-            .getElementById("nickname")
-            .textContent =
-                nickname;
-
-        }
-
-
-        if(uid){
-
-            document
-            .getElementById("uid")
-            .textContent =
-                uid;
-
-        }
-
-
-        backgroundSpeed =
-            speed;
-
-
-        startBackground();
-
-    });
-
-
-/* =====================================================
-   RESET TEST
-===================================================== */
-
-document
-    .getElementById("resetTest")
-    .addEventListener("click", () => {
-
-
-        document
-        .getElementById("testNickname")
-        .value =
-            "FFVN.TGM";
-
-
-        document
-        .getElementById("testUID")
-        .value =
-            "12334445856";
-
-
-        document
-        .getElementById("testSpeed")
-        .value =
-            "6000";
-
-
-        document
-        .getElementById("nickname")
-        .textContent =
-            "FFVN.TGM";
-
-
-        document
-        .getElementById("uid")
-        .textContent =
-            "12334445856";
-
-
-        backgroundSpeed =
-            6000;
-
-
-        startBackground();
-
-    });
 
 </script>
 
+
 </body>
-</html>
+   </html>

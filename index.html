@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BIO CỦA FFVN.TGM 🔥</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:'Be Vietnam Pro',sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-10;
+    overflow:hidden;
+    background:#050505;
+}
+
+.bg{
+    position:absolute;
+    inset:0;
+
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    opacity:0;
+    transform:scale(1.08);
+
+    transition:
+        opacity 1.8s ease,
+        transform 7s ease;
+}
+
+.bg1{
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.35),
+            rgba(0,0,0,.75)
+        ),
+        url("https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20266/361b072124e0e479833da4e10834916b.jpg");
+}
+
+.bg2{
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.80)
+        ),
+        url("https://cdn.wildflamestudio.com/common/web_event/official2/dist/client/img/full_logo.969f536.png");
+}
+
+.bg.active{
+    opacity:1;
+    transform:scale(1);
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    z-index:-5;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(255,70,0,.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.80)
+        );
+
+    pointer-events:none;
+}
+
+
+/* =====================================================
+   LIGHT
+===================================================== */
+
+.light{
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    left:50%;
+    top:30%;
+
+    transform:translate(-50%,-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,90,20,.15),
+            transparent 70%
+        );
+
+    filter:blur(25px);
+
+    pointer-events:none;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.loader{
+    position:fixed;
+    inset:0;
+
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,70,0,.15),
+            transparent 40%
+        ),
+        #050505;
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+
+.loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loading-logo{
+    width:150px;
+    height:150px;
+
+    object-fit:cover;
+    border-radius:50%;
+
+    box-shadow:
+        0 0 15px rgba(255,70,0,.8),
+        0 0 40px rgba(255,70,0,.45),
+        0 0 90px rgba(255,70,0,.2);
+
+    animation:
+        logo3D 3s ease-in-out infinite,
+        logoFloat 2.5s ease-in-out infinite;
+
+    transform-style:preserve-3d;
+}
+
+@keyframes logo3D{
+
+    0%{
+        transform:
+            perspective(600px)
+            rotateY(-25deg)
+            rotateX(8deg)
+            scale(.92);
+    }
+
+    50%{
+        transform:
+            perspective(600px)
+            rotateY(25deg)
+            rotateX(-8deg)
+            scale(1.04);
+    }
+
+    100%{
+        transform:
+            perspective(600px)
+            rotateY(-25deg)
+            rotateX(8deg)
+            scale(.92);
+    }
+}
+
+@keyframes logoFloat{
+
+    0%,100%{
+        filter:brightness(1);
+    }
+
+    50%{
+        filter:brightness(1.35);
+    }
+}
+
+.loading-title{
+
+    margin-top:25px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:clamp(22px,6vw,38px);
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    text-align:center;
+
+    color:#fff;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.8),
+        0 0 25px rgba(255,70,0,.8),
+        0 0 50px rgba(255,70,0,.4);
+
+    animation:title3D 2s ease-in-out infinite;
+}
+
+.loading-title span{
+    color:#ff5a16;
+}
+
+@keyframes title3D{
+
+    0%,100%{
+        transform:
+            perspective(500px)
+            rotateX(0deg)
+            scale(1);
+    }
+
+    50%{
+        transform:
+            perspective(500px)
+            rotateX(8deg)
+            scale(1.05);
+    }
+}
+
+
+/* =====================================================
+   LOADING PROGRESS
+===================================================== */
+
+.progress-box{
+    width:min(320px,80vw);
+    margin-top:28px;
+    text-align:center;
+}
+
+.progress-text{
+    font-family:'Orbitron',sans-serif;
+    font-size:13px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.progress-bar{
+    width:100%;
+    height:7px;
+
+    overflow:hidden;
+    border-radius:50px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        inset 0 0 8px rgba(0,0,0,.7),
+        0 0 15px rgba(255,70,0,.15);
+}
+
+.progress{
+    width:0%;
+    height:100%;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff2b00,
+            #ff8a00,
+            #fff
+        );
+
+    box-shadow:
+        0 0 10px #ff3b00,
+        0 0 25px rgba(255,60,0,.7);
+
+    transition:width .05s linear;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px 16px;
+}
+
+.bio{
+    width:min(520px,100%);
+
+    text-align:center;
+
+    padding:28px 18px 24px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.12),
+            rgba(255,255,255,.035)
+        );
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.6),
+        inset 0 1px rgba(255,255,255,.12);
+
+    animation:
+        bioIn 1.2s cubic-bezier(.16,1,.3,1);
+}
+
+@keyframes bioIn{
+
+    from{
+        opacity:0;
+
+        transform:
+            perspective(900px)
+            rotateX(15deg)
+            translateY(50px)
+            scale(.92);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            perspective(900px)
+            rotateX(0)
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =====================================================
+   PROFILE LOGO
+===================================================== */
+
+.profile-logo{
+
+    width:115px;
+    height:115px;
+
+    object-fit:cover;
+    border-radius:50%;
+
+    border:3px solid rgba(255,255,255,.9);
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,.5),
+        0 0 30px rgba(255,70,0,.8),
+        0 0 70px rgba(255,70,0,.35);
+
+    animation:
+        profileFloat 4s ease-in-out infinite;
+}
+
+@keyframes profileFloat{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotateY(-5deg);
+    }
+
+    50%{
+        transform:
+            translateY(-8px)
+            rotateY(5deg);
+    }
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.bio-title{
+
+    margin-top:20px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:clamp(24px,7vw,36px);
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    color:#fff;
+
+    text-shadow:
+        0 2px 0 #151515,
+        0 5px 10px rgba(0,0,0,.8),
+        0 0 20px rgba(255,70,0,.6);
+
+    animation:titleGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes titleGlow{
+
+    0%,100%{
+        text-shadow:
+            0 2px 0 #111,
+            0 5px 10px rgba(0,0,0,.8),
+            0 0 15px rgba(255,70,0,.4);
+    }
+
+    50%{
+        text-shadow:
+            0 2px 0 #111,
+            0 5px 10px rgba(0,0,0,.8),
+            0 0 30px rgba(255,70,0,.9);
+    }
+}
+
+.subtitle{
+
+    margin-top:9px;
+
+    color:rgba(255,255,255,.72);
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+    font-weight:600;
+}
+
+
+/* =====================================================
+   GAME INFO
+===================================================== */
+
+.game-info{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    margin-top:18px;
+}
+
+.info-card{
+
+    display:flex;
+    align-items:center;
+
+    padding:12px;
+
+    min-height:65px;
+
+    text-align:left;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.11),
+            rgba(255,255,255,.035)
+        );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.08),
+        0 7px 20px rgba(0,0,0,.25);
+
+    transition:.25s ease;
+}
+
+.info-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:
+        rgba(255,85,20,.55);
+
+    box-shadow:
+        0 10px 28px rgba(0,0,0,.35),
+        0 0 20px rgba(255,70,0,.15);
+}
+
+.info-icon{
+
+    width:38px;
+    height:38px;
+
+    min-width:38px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-right:9px;
+
+    border-radius:11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5a16,
+            #ff2b00
+        );
+
+    font-size:17px;
+}
+
+.info-label{
+
+    display:block;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+    color:rgba(255,255,255,.48);
+
+    margin-bottom:4px;
+}
+
+.info-text{
+    min-width:0;
+}
+
+.info-text strong{
+
+    display:block;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    color:#fff;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+
+/* =====================================================
+   DANH SÁCH
+===================================================== */
+
+.separator{
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    margin:25px 0 18px;
+
+    color:#ff641f;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+}
+
+.separator::before,
+.separator::after{
+
+    content:"";
+
+    height:1px;
+
+    flex:1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,90,20,.8)
+        );
+}
+
+.separator::after{
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,90,20,.8),
+            transparent
+        );
+}
+
+.links{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:13px;
+}
+
+
+/* =====================================================
+   LINK CARD
+===================================================== */
+
+.link{
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    width:100%;
+    min-height:68px;
+
+    padding:10px 15px;
+
+    text-decoration:none;
+    color:#fff;
+
+    border-radius:17px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(255,255,255,.13),
+            rgba(255,255,255,.045)
+        );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.28);
+
+    transition:.25s ease;
+}
+
+.link::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:80%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255,255,255,.12),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    transition:left .6s ease;
+}
+
+.link:hover::before{
+    left:140%;
+}
+
+.link:hover{
+
+    transform:
+        translateY(-3px)
+        scale(1.015);
+
+    border-color:
+        rgba(255,100,30,.55);
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(255,80,20,.20),
+            rgba(255,255,255,.06)
+        );
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.4),
+        0 0 25px rgba(255,70,0,.18);
+}
+
+.link:active{
+    transform:scale(.97);
+}
+
+
+/* =====================================================
+   ⭐ LOGO ZALO CHUẨN
+===================================================== */
+
+.zalo-icon{
+
+    width:45px;
+    height:45px;
+
+    min-width:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-right:13px;
+
+    border-radius:13px;
+
+    background:#0068ff;
+
+    box-shadow:
+        0 5px 15px rgba(0,104,255,.45),
+        inset 0 1px rgba(255,255,255,.25);
+
+    overflow:hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.zalo-icon img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    padding:7px;
+
+    display:block;
+}
+
+.link:hover .zalo-icon{
+
+    transform:
+        scale(1.08)
+        rotate(-3deg);
+
+    box-shadow:
+        0 5px 20px rgba(0,104,255,.65),
+        0 0 25px rgba(0,120,255,.35);
+}
+
+
+/* =====================================================
+   CUSTOM ICON WEBSITE
+===================================================== */
+
+.custom-icon{
+
+    width:45px;
+    height:45px;
+
+    min-width:45px;
+
+    object-fit:cover;
+
+    border-radius:13px;
+
+    margin-right:13px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.35),
+        0 0 15px rgba(255,70,0,.15);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.link:hover .custom-icon{
+
+    transform:
+        scale(1.08)
+        rotate(-3deg);
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.45),
+        0 0 22px rgba(255,70,0,.3);
+}
+
+
+/* =====================================================
+   MESSENGER
+===================================================== */
+
+.icon.messenger{
+
+    width:45px;
+    height:45px;
+
+    min-width:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:13px;
+
+    margin-right:13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #9d45ff,
+            #1677ff
+        );
+
+    font-size:21px;
+
+    box-shadow:
+        0 5px 15px rgba(80,40,255,.35);
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.link-text{
+    flex:1;
+    text-align:left;
+}
+
+.link-title{
+
+    display:block;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    line-height:1.35;
+}
+
+.link-description{
+
+    display:block;
+
+    margin-top:3px;
+
+    font-size:10px;
+
+    color:rgba(255,255,255,.5);
+
+    font-weight:500;
+}
+
+.arrow{
+
+    font-size:22px;
+
+    color:rgba(255,255,255,.45);
+
+    transition:.25s ease;
+}
+
+.link:hover .arrow{
+
+    transform:translateX(4px);
+
+    color:#ff6827;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    margin-top:25px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    color:rgba(255,255,255,.4);
+}
+
+.footer span{
+    color:#ff5a16;
+}
+
+
+/* =====================================================
+   PARTICLES
+===================================================== */
+
+.particles{
+
+    position:fixed;
+    inset:0;
+
+    z-index:-2;
+
+    pointer-events:none;
+}
+
+.particle{
+
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    opacity:.45;
+
+    box-shadow:
+        0 0 8px rgba(255,255,255,.8);
+
+    animation:
+        particleMove linear infinite;
+}
+
+@keyframes particleMove{
+
+    from{
+        transform:translateY(110vh);
+    }
+
+    to{
+        transform:translateY(-10vh);
+    }
+}
+
+
+/* =====================================================
+   TEST BUTTON
+===================================================== */
+
+.test-button{
+
+    position:fixed;
+
+    right:15px;
+    bottom:15px;
+
+    z-index:5000;
+
+    width:52px;
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5a16,
+            #ff2100
+        );
+
+    box-shadow:
+        0 5px 25px rgba(255,60,0,.45);
+
+    transition:.25s ease;
+}
+
+.test-button:hover{
+    transform:scale(1.1);
+}
+
+
+/* =====================================================
+   TEST PANEL
+===================================================== */
+
+.test-panel{
+
+    position:fixed;
+
+    right:15px;
+    bottom:78px;
+
+    z-index:4999;
+
+    width:min(330px,calc(100vw - 30px));
+
+    padding:18px;
+
+    border-radius:20px;
+
+    background:
+        rgba(10,10,10,.94);
+
+    border:
+        1px solid rgba(255,255,255,.14);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.65);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+        translateY(15px)
+        scale(.95);
+
+    transition:.25s ease;
+}
+
+.test-panel.show{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+.test-title{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    color:#ff6827;
+
+    margin-bottom:15px;
+}
+
+.test-group{
+    margin-bottom:12px;
+}
+
+.test-group label{
+
+    display:block;
+
+    margin-bottom:5px;
+
+    font-size:10px;
+
+    color:rgba(255,255,255,.55);
+
+    font-weight:700;
+}
+
+.test-group input,
+.test-group select{
+
+    width:100%;
+
+    padding:10px 11px;
+
+    border:none;
+    outline:none;
+
+    border-radius:10px;
+
+    color:#fff;
+
+    background:
+        rgba(255,255,255,.09);
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    font-family:'Be Vietnam Pro',sans-serif;
+}
+
+.test-actions{
+
+    display:flex;
+    gap:8px;
+
+    margin-top:15px;
+}
+
+.test-actions button{
+
+    flex:1;
+
+    padding:10px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-weight:800;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5a16,
+            #ff2100
+        );
+}
+
+.test-actions button.reset{
+
+    background:
+        rgba(255,255,255,.1);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:500px){
+
+    .main{
+        padding:18px 12px;
+    }
+
+    .bio{
+        padding:25px 13px 20px;
+        border-radius:24px;
+    }
+
+    .profile-logo{
+        width:100px;
+        height:100px;
+    }
+
+    .link{
+        min-height:64px;
+        padding:9px 12px;
+    }
+
+    .zalo-icon,
+    .custom-icon,
+    .icon.messenger{
+
+        width:42px;
+        height:42px;
+
+        min-width:42px;
+
+        margin-right:10px;
+    }
+
+    .zalo-icon img{
+        padding:6px;
+    }
+
+    .link-title{
+        font-size:13px;
+    }
+
+    .link-description{
+        font-size:9px;
+    }
+
+    .game-info{
+        gap:8px;
+    }
+
+    .info-card{
+        padding:10px 8px;
+    }
+
+    .info-icon{
+
+        width:34px;
+        height:34px;
+
+        min-width:34px;
+
+        margin-right:7px;
+
+        font-size:15px;
+    }
+
+    .info-text strong{
+        font-size:10px;
+    }
+
+    .info-label{
+        font-size:7px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     LOADING
+===================================================== -->
+
+<div class="loader" id="loader">
+
+    <img
+        class="loading-logo"
+        src="https://cdn.phototourl.com/free/2026-09-01-07f3fab6-7e0f-48b6-9bcf-30baf52df6cb.jpg"
+        alt="FFVN.TGM"
+    >
+
+    <div class="loading-title">
+        FFVN.TGM <span>🔥</span>
+    </div>
+
+    <div class="progress-box">
+
+        <div class="progress-text">
+            ĐANG KHỞI ĐỘNG...
+            <span id="percent">1%</span>
+        </div>
+
+        <div class="progress-bar">
+            <div
+                class="progress"
+                id="progress">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background">
+
+    <div class="bg bg1 active"></div>
+    <div class="bg bg2"></div>
+
+</div>
+
+<div class="overlay"></div>
+<div class="light"></div>
+
+
+<!-- PARTICLES -->
+
+<div
+    class="particles"
+    id="particles">
+</div>
+
+
+<!-- =====================================================
+     BIO
+===================================================== -->
+
+<main class="main">
+
+<section class="bio">
+
+
+    <!-- LOGO -->
+
+    <img
+        class="profile-logo"
+        src="https://cdn.phototourl.com/free/2026-09-01-07f3fab6-7e0f-48b6-9bcf-30baf52df6cb.jpg"
+        alt="FFVN.TGM Logo"
+    >
+
+
+    <!-- TITLE -->
+
+    <h1 class="bio-title">
+        BIO CỦA FFVN.TGM 🔥
+    </h1>
+
+
+    <!-- SUBTITLE -->
+
+    <p class="subtitle">
+        FREE FIRE VIỆT NAM
+        • COMMUNITY
+        • EVENT
+        • UPDATE
+    </p>
+
+
+    <!-- =================================================
+         GAME INFO
+    ================================================== -->
+
+    <div class="game-info">
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                👤
+            </div>
+
+            <div class="info-text">
+
+                <span class="info-label">
+                    NICKNAME
+                </span>
+
+                <strong id="nickname">
+                    FFVN.TGM
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                🆔
+            </div>
+
+            <div class="info-text">
+
+                <span class="info-label">
+                    UID GAME
+                </span>
+
+                <strong id="uid">
+                    12334445856
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         DANH SÁCH
+    ================================================== -->
+
+    <div class="separator">
+        DANH SÁCH
+    </div>
+
+
+    <div class="links">
+
+
+        <!-- =================================================
+             ZALO - THÔNG BÁO
+        ================================================== -->
+
+        <a
+            class="link"
+            href="https://zalo.me/g/jczmui016"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="zalo-icon">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Icon_of_Zalo.svg"
+                    alt="Zalo"
+                >
+
+            </div>
+
+
+            <div class="link-text">
+
+                <span class="link-title">
+                    NHÓM THÔNG BÁO FF
+                </span>
+
+                <span class="link-description">
+                    Nhận thông báo & tin tức Free Fire
+                </span>
+
+            </div>
+
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- =================================================
+             ZALO - CHAT
+        ================================================== -->
+
+        <a
+            class="link"
+            href="https://zalo.me/g/tcgoju095"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="zalo-icon">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Icon_of_Zalo.svg"
+                    alt="Zalo"
+                >
+
+            </div>
+
+
+            <div class="link-text">
+
+                <span class="link-title">
+                    NHÓM CHAT FF
+                </span>
+
+                <span class="link-description">
+                    Giao lưu & trò chuyện cùng cộng đồng
+                </span>
+
+            </div>
+
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- =================================================
+             MESSENGER
+        ================================================== -->
+
+        <a
+            class="link"
+            href="https://m.me/j/Abb2xf4W-TzpKDzA/?send_source=gc%3Acopy_invite_link_t"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <div class="icon messenger">
+                💬
+            </div>
+
+            <div class="link-text">
+
+                <span class="link-title">
+                    NHÓM EVENT UPDATE
+                </span>
+
+                <span class="link-description">
+                    Event & Update Free Fire
+                </span>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- =================================================
+             AREXNETWORK
+        ================================================== -->
+
+        <a
+            class="link"
+            href="https://arexnetwork.vn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                class="custom-icon"
+                src="https://cdn.phototourl.com/free/2026-09-01-9e8750dc-2023-4879-8851-028b20c60730.jpg"
+                alt="Arexnetwork.vn"
+            >
+
+            <div class="link-text">
+
+                <span class="link-title">
+                    AREXNETWORK.VN
+                </span>
+
+                <span class="link-description">
+                    Website Arexnetwork.vn
+                </span>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+        <!-- =================================================
+             NHÀ SÁNG TẠO
+        ================================================== -->
+
+        <a
+            class="link"
+            href="https://nhasangtao.ff.garena.vn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <img
+                class="custom-icon"
+                src="https://dl.dir.freefiremobile.com/common/OB44/VN/WebUGC/Partner.jpg"
+                alt="Nhà Sáng Tạo Free Fire"
+            >
+
+            <div class="link-text">
+
+                <span class="link-title">
+                    NHASANGTAO.FF.GARENA.VN
+                </span>
+
+                <span class="link-description">
+                    Cổng thông tin Nhà Sáng Tạo Free Fire
+                </span>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        POWERED BY
+        <span>FFVN.TGM 🔥</span>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     TEST BUTTON
+===================================================== -->
+
+<button
+    class="test-button"
+    id="testButton"
+    title="Mở chế độ test"
+>
+    🛠️
+</button>
+
+
+<!-- =====================================================
+     TEST PANEL
+===================================================== -->
+
+<div
+    class="test-panel"
+    id="testPanel"
+>
+
+    <div class="test-title">
+        🛠️ BIO TEST MODE
+    </div>
+
+
+    <div class="test-group">
+
+        <label>
+            NICKNAME
+        </label>
+
+        <input
+            id="testNickname"
+            type="text"
+            value="FFVN.TGM"
+            maxlength="30"
+        >
+
+    </div>
+
+
+    <div class="test-group">
+
+        <label>
+            UID GAME
+        </label>
+
+        <input
+            id="testUID"
+            type="text"
+            value="12334445856"
+            maxlength="20"
+        >
+
+    </div>
+
+
+    <div class="test-group">
+
+        <label>
+            TỐC ĐỘ BACKGROUND
+        </label>
+
+        <select id="testSpeed">
+
+            <option value="3000">
+                3 giây
+            </option>
+
+            <option value="6000" selected>
+                6 giây
+            </option>
+
+            <option value="10000">
+                10 giây
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="test-actions">
+
+        <button id="applyTest">
+            ÁP DỤNG
+        </button>
+
+        <button
+            class="reset"
+            id="resetTest"
+        >
+            RESET
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+let progress = 1;
+
+const progressBar =
+    document.getElementById("progress");
+
+const percent =
+    document.getElementById("percent");
+
+const loader =
+    document.getElementById("loader");
+
+
+const loadingTimer = setInterval(() => {
+
+    progress++;
+
+    progressBar.style.width =
+        progress + "%";
+
+    percent.textContent =
+        progress + "%";
+
+
+    if(progress >= 100){
+
+        clearInterval(loadingTimer);
+
+        setTimeout(() => {
+
+            loader.classList.add("hide");
+
+        },500);
+
+    }
+
+},30);
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+const backgrounds =
+    document.querySelectorAll(".bg");
+
+let currentBackground = 0;
+
+let backgroundSpeed = 6000;
+
+let backgroundTimer;
+
+
+function startBackground(){
+
+    clearInterval(backgroundTimer);
+
+    backgroundTimer = setInterval(() => {
+
+        backgrounds[currentBackground]
+            .classList.remove("active");
+
+
+        currentBackground++;
+
+        if(
+            currentBackground >=
+            backgrounds.length
+        ){
+
+            currentBackground = 0;
+
+        }
+
+
+        backgrounds[currentBackground]
+            .classList.add("active");
+
+    },backgroundSpeed);
+
+}
+
+startBackground();
+
+
+/* =====================================================
+   PARTICLES
+===================================================== */
+
+const particles =
+    document.getElementById("particles");
+
+
+for(let i = 0; i < 35; i++){
+
+    const particle =
+        document.createElement("div");
+
+    particle.className =
+        "particle";
+
+    particle.style.left =
+        Math.random() * 100 + "%";
+
+    particle.style.animationDuration =
+        (5 + Math.random() * 10) + "s";
+
+    particle.style.animationDelay =
+        (-Math.random() * 10) + "s";
+
+    particle.style.opacity =
+        (0.15 + Math.random() * 0.5);
+
+    particles.appendChild(
+        particle
+    );
+
+}
+
+
+/* =====================================================
+   TEST MODE
+===================================================== */
+
+const testButton =
+    document.getElementById("testButton");
+
+const testPanel =
+    document.getElementById("testPanel");
+
+
+testButton.addEventListener(
+    "click",
+    () => {
+
+        testPanel.classList.toggle("show");
+
+    }
+);
+
+
+/* =====================================================
+   APPLY TEST
+===================================================== */
+
+document
+    .getElementById("applyTest")
+    .addEventListener("click", () => {
+
+
+        const nickname =
+            document
+            .getElementById("testNickname")
+            .value
+            .trim();
+
+
+        const uid =
+            document
+            .getElementById("testUID")
+            .value
+            .trim();
+
+
+        const speed =
+            Number(
+                document
+                .getElementById("testSpeed")
+                .value
+            );
+
+
+        if(nickname){
+
+            document
+            .getElementById("nickname")
+            .textContent =
+                nickname;
+
+        }
+
+
+        if(uid){
+
+            document
+            .getElementById("uid")
+            .textContent =
+                uid;
+
+        }
+
+
+        backgroundSpeed =
+            speed;
+
+
+        startBackground();
+
+    });
+
+
+/* =====================================================
+   RESET TEST
+===================================================== */
+
+document
+    .getElementById("resetTest")
+    .addEventListener("click", () => {
+
+
+        document
+        .getElementById("testNickname")
+        .value =
+            "FFVN.TGM";
+
+
+        document
+        .getElementById("testUID")
+        .value =
+            "12334445856";
+
+
+        document
+        .getElementById("testSpeed")
+        .value =
+            "6000";
+
+
+        document
+        .getElementById("nickname")
+        .textContent =
+            "FFVN.TGM";
+
+
+        document
+        .getElementById("uid")
+        .textContent =
+            "12334445856";
+
+
+        backgroundSpeed =
+            6000;
+
+
+        startBackground();
+
+    });
+
+</script>
+
+</body>
+</html>

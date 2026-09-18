@@ -6,14 +6,50 @@
 
 <title>BIO CỦA FFVN.TGM 🔥</title>
 
-<!-- FONT CHUYÊN NGHIỆP -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-
-
 <style>
+
+/* =====================================================
+   GFF FREE FIRE FONTS
+===================================================== */
+
+/* GFF Latin - Bold cho tiêu đề */
+@font-face {
+    font-family: 'GFF Latin Title';
+    src:
+        url('https://dl.dir.freefiremobile.com/common/web_event/common/fonts/website/GFFLatinW05-Bold.woff2') format('woff2'),
+        url('https://dl.dir.freefiremobile.com/common/web_event/common/fonts/website/GFFLatinW05-Bold.woff') format('woff'),
+        url('https://dl.dir.freefiremobile.com/common/web_event/common/fonts/website/GFFLatinW05-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* GFF Latin - Regular cho mô tả */
+@font-face {
+    font-family: 'GFF Latin Desc';
+    src:
+        url('https://dl.dir.freefiremobile.com/common/web_event/common/fonts/website/GFFLatinW05-Regular.woff2') format('woff2'),
+        url('https://dl.dir.freefiremobile.com/common/web_event/common/fonts/website/GFFLatinW05-Regular.woff') format('woff'),
+        url('https://dl.dir.freefiremobile.com/common/web_event/common/fonts/website/GFFLatinW05-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* GFF Latin Bold cho toàn bộ hệ thống */
+@font-face {
+    font-family: 'GFF-Latin-Bold';
+    src:
+        url('https://dl.dir.freefiremobile.com/common/web_event/common/fonts/website/GFFLatinW05-Bold.woff2') format('woff2'),
+        url('https://dl.dir.freefiremobile.com/common/web_event/common/fonts/website/GFFLatinW05-Bold.woff') format('woff'),
+        url('https://dl.dir.freefiremobile.com/common/web_event/common/fonts/website/GFFLatinW05-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 /* =====================================================
    RESET
@@ -33,7 +69,7 @@ body{
 }
 
 body{
-    font-family:'Be Vietnam Pro',sans-serif;
+    font-family:'GFF-Latin-Bold', sans-serif;
     background:#050505;
     color:#fff;
     overflow-x:hidden;
@@ -69,34 +105,54 @@ body{
         transform 7s ease;
 }
 
+
+/* BACKGROUND 1 */
+
 .bg1{
     background-image:
         linear-gradient(
-            rgba(0,0,0,.35),
-            rgba(0,0,0,.75)
+            rgba(0,0,0,.30),
+            rgba(0,0,0,.78)
         ),
-        url("https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20266/361b072124e0e479833da4e10834916b.jpg");
+        url("https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20269/203081f2d0b7ddf43df1fbf6d1bbcfe1.jpg");
 }
+
+
+/* BACKGROUND 2 */
 
 .bg2{
     background-image:
         linear-gradient(
-            rgba(0,0,0,.42),
-            rgba(0,0,0,.80)
+            rgba(0,0,0,.34),
+            rgba(0,0,0,.82)
         ),
-        url("https://cdn.wildflamestudio.com/common/web_event/official2/dist/client/img/full_logo.969f536.png");
+        url("https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/202210/1ecb3bea1afa4220ef202a61763325c0.jpg");
 }
+
 
 /* BACKGROUND 3 */
 
 .bg3{
     background-image:
         linear-gradient(
-            rgba(0,0,0,.38),
-            rgba(0,0,0,.78)
+            rgba(0,0,0,.32),
+            rgba(0,0,0,.80)
         ),
-        url("https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/20264/417b1a4c151c7fcf2afb73afeaaefa16.jpg");
+        url("https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/dce5a6820615633595f6ce56fd1c2735.jpg");
 }
+
+
+/* BACKGROUND 4 */
+
+.bg4{
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.34),
+            rgba(0,0,0,.82)
+        ),
+        url("https://cdn.wildflamestudio.com/common/web_event/official2.ff.garena.all/img/20228/d2485cdf98c67fc41c84d53f872334f6.jpg");
+}
+
 
 .bg.active{
     opacity:1;
@@ -116,13 +172,13 @@ body{
     background:
         radial-gradient(
             circle at 50% 30%,
-            rgba(255,70,0,.18),
+            rgba(255,70,0,.20),
             transparent 35%
         ),
         linear-gradient(
             180deg,
-            rgba(0,0,0,.12),
-            rgba(0,0,0,.80)
+            rgba(0,0,0,.10),
+            rgba(0,0,0,.84)
         );
 
     pointer-events:none;
@@ -192,11 +248,10 @@ body{
 
 
 /* =====================================================
-   LOADING LOGO 3D
+   LOADING LOGO
 ===================================================== */
 
 .loading-logo{
-
     width:150px;
     height:150px;
 
@@ -265,11 +320,11 @@ body{
 
     margin-top:25px;
 
-    font-family:'Orbitron',sans-serif;
+    font-family:'GFF Latin Title', sans-serif;
 
-    font-size:clamp(22px,6vw,38px);
+    font-size:clamp(30px,8vw,48px);
 
-    font-weight:900;
+    font-weight:700;
 
     letter-spacing:2px;
 
@@ -319,7 +374,7 @@ body{
 
 .progress-text{
 
-    font-family:'Orbitron',sans-serif;
+    font-family:'GFF-Latin-Bold', sans-serif;
 
     font-size:13px;
 
@@ -483,27 +538,33 @@ body{
 
 
 /* =====================================================
-   TITLE
+   TIÊU ĐỀ BIO — GFF LATIN TITLE
 ===================================================== */
 
 .bio-title{
 
     margin-top:20px;
 
-    font-family:'Orbitron',sans-serif;
+    font-family:'GFF Latin Title', sans-serif;
 
-    font-size:clamp(24px,7vw,36px);
+    /* TIÊU ĐỀ TO */
+    font-size:clamp(34px,9vw,54px);
 
-    font-weight:900;
+    font-weight:700;
 
-    letter-spacing:1px;
+    line-height:1.08;
+
+    letter-spacing:1.5px;
 
     color:#fff;
 
+    text-align:center;
+
     text-shadow:
-        0 2px 0 #151515,
-        0 5px 10px rgba(0,0,0,.8),
-        0 0 20px rgba(255,70,0,.6);
+        0 3px 0 #111,
+        0 6px 12px rgba(0,0,0,.9),
+        0 0 20px rgba(255,70,0,.65),
+        0 0 45px rgba(255,70,0,.35);
 
     animation:titleGlow 2.5s ease-in-out infinite;
 }
@@ -511,36 +572,51 @@ body{
 @keyframes titleGlow{
 
     0%,100%{
+
+        transform:
+            perspective(600px)
+            scale(1);
+
         text-shadow:
-            0 2px 0 #111,
-            0 5px 10px rgba(0,0,0,.8),
-            0 0 15px rgba(255,70,0,.4);
+            0 3px 0 #111,
+            0 6px 12px rgba(0,0,0,.9),
+            0 0 18px rgba(255,70,0,.45);
     }
 
     50%{
+
+        transform:
+            perspective(600px)
+            scale(1.04);
+
         text-shadow:
-            0 2px 0 #111,
-            0 5px 10px rgba(0,0,0,.8),
-            0 0 30px rgba(255,70,0,.9);
+            0 3px 0 #111,
+            0 6px 12px rgba(0,0,0,.9),
+            0 0 30px rgba(255,70,0,.9),
+            0 0 55px rgba(255,70,0,.45);
     }
 }
 
 
 /* =====================================================
-   SUBTITLE
+   MÔ TẢ — GFF LATIN REGULAR
 ===================================================== */
 
 .subtitle{
 
-    margin-top:9px;
+    margin-top:12px;
 
-    color:rgba(255,255,255,.72);
+    font-family:'GFF Latin Desc', sans-serif;
 
-    font-size:13px;
+    color:rgba(255,255,255,.78);
+
+    font-size:14px;
+
+    line-height:1.5;
 
     letter-spacing:1px;
 
-    font-weight:600;
+    font-weight:400;
 }
 
 
@@ -641,9 +717,9 @@ body{
 
     display:block;
 
-    font-family:'Orbitron',sans-serif;
+    font-family:'GFF-Latin-Bold', sans-serif;
 
-    font-size:8px;
+    font-size:9px;
 
     letter-spacing:1px;
 
@@ -656,9 +732,11 @@ body{
 
     display:block;
 
-    font-size:12px;
+    font-family:'GFF-Latin-Bold', sans-serif;
 
-    font-weight:800;
+    font-size:13px;
+
+    font-weight:700;
 
     color:#fff;
 
@@ -686,9 +764,9 @@ body{
 
     color:#ff641f;
 
-    font-family:'Orbitron',sans-serif;
+    font-family:'GFF Latin Title', sans-serif;
 
-    font-size:11px;
+    font-size:13px;
 
     font-weight:700;
 
@@ -977,9 +1055,11 @@ body{
 
     display:block;
 
-    font-size:14px;
+    font-family:'GFF-Latin-Bold', sans-serif;
 
-    font-weight:800;
+    font-size:15px;
+
+    font-weight:700;
 
     line-height:1.35;
 }
@@ -988,18 +1068,24 @@ body{
 
     display:block;
 
-    margin-top:3px;
+    margin-top:4px;
 
-    font-size:10px;
+    font-family:'GFF Latin Desc', sans-serif;
 
-    color:rgba(255,255,255,.5);
+    font-size:11px;
 
-    font-weight:500;
+    color:rgba(255,255,255,.58);
+
+    font-weight:400;
+
+    line-height:1.35;
 }
 
 .arrow{
 
-    font-size:22px;
+    font-family:Arial,sans-serif;
+
+    font-size:25px;
 
     color:
         rgba(255,255,255,.45);
@@ -1026,17 +1112,20 @@ body{
 
     margin-top:25px;
 
-    font-family:'Orbitron',sans-serif;
+    font-family:'GFF Latin Desc', sans-serif;
 
-    font-size:9px;
+    font-size:10px;
 
     letter-spacing:2px;
 
     color:
-        rgba(255,255,255,.4);
+        rgba(255,255,255,.45);
 }
 
 .footer span{
+
+    font-family:'GFF Latin Title', sans-serif;
+
     color:#ff5a16;
 }
 
@@ -1113,6 +1202,31 @@ body{
 
     }
 
+
+    /* TIÊU ĐỀ TO TRÊN MOBILE */
+
+    .bio-title{
+
+        font-size:clamp(29px,8.5vw,42px);
+
+        letter-spacing:.8px;
+
+        line-height:1.08;
+
+        white-space:normal;
+
+    }
+
+
+    .subtitle{
+
+        font-size:12px;
+
+        line-height:1.5;
+
+    }
+
+
     .link{
 
         min-height:64px;
@@ -1143,7 +1257,7 @@ body{
     }
 
     .link-description{
-        font-size:9px;
+        font-size:10px;
     }
 
     .game-info{
@@ -1168,298 +1282,58 @@ body{
     }
 
     .info-text strong{
-        font-size:10px;
+        font-size:11px;
     }
 
     .info-label{
-        font-size:7px;
+        font-size:8px;
     }
 
 }
 
 
 /* =====================================================
-   NEW CSS (FONT & ITEM SYSTEM)
+   EXTRA SMALL DEVICES
 ===================================================== */
 
-@font-face { 
-    font-family: 'GFF-Bold'; 
-    src: url('/api/assets/font.woff') format('woff'); 
-}
-:root { 
-    --ff-yellow: #ffde00; 
-    --ff-emerald: #00ffa3; 
-    --ff-red: #ff3e3e; 
-}
+@media(max-width:360px){
 
-/* Forces header navigation bar to always paint on top of scrolling cards */
-header {
-    z-index: 1000 !important;
-}
-
-body { 
-    background: #000; 
-    color: #fff; 
-    min-height: 100vh; 
-    background-image: url('/api/assets/bg.jpg'); 
-    background-size: cover; 
-    background-attachment: fixed; 
-    font-family: 'Inter', sans-serif; 
-    overflow-x: hidden; 
-    padding-bottom: 60px;
-}
-body::before { 
-    content: ""; 
-    position: fixed; 
-    inset: 0; 
-    background: rgba(0, 0, 0, 0.98); 
-    z-index: -1; 
-}
-.gff { 
-    font-family: 'GFF-Bold', sans-serif; 
-}
-
-/* ADAPTIVE MULTI-DEVICE WRAPPER DESIGN */
-.main-wrapper { 
-    width: 100%; 
-    max-width: 480px; 
-    margin: 0 auto; 
-    padding: 0 16px; 
-    transition: max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1); 
-}
-@media (min-width: 768px) { .main-wrapper { max-width: 720px; } }
-@media (min-width: 1024px) { .main-wrapper { max-width: 980px; } }
-
-.panel-container { 
-    background: #0a0a0a; 
-    border: 1px solid #1f1f1f; 
-    border-radius: 20px; 
-    padding: 32px; 
-    position: relative; 
-}
-.panel-container::before { 
-    content: ""; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 4px; 
-    height: 100%; 
-    background: var(--ff-yellow); 
-    border-radius: 20px 0 0 20px; 
-}
-
-.btn-mechanical { 
-    cursor: pointer; 
-    font-family: 'GFF-Bold'; 
-    text-transform: uppercase; 
-    font-style: italic; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    transition: 0.1s; 
-    border-radius: 14px; 
-    gap: 12px; 
-}
-.btn-mechanical:active { transform: translateY(3px); }
-.btn-yellow { background: var(--ff-yellow); color: #000; box-shadow: 0 5px 0 #c2a900; }
-.btn-green { background: var(--ff-emerald); color: #000; box-shadow: 0 5px 0 #00a86b; width: 64px; height: 64px; }
-.btn-red { background: var(--ff-red); color: #fff; box-shadow: 0 5px 0 #b31d1d; width: 64px; height: 64px; }
-.btn-gray { background: #222; color: #888; box-shadow: 0 5px 0 #111; }
-
-/* ADAPTIVE WISHLIST GRID COLUMNS */
-.wish-grid { 
-    display: grid; 
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 8px; 
-    margin-top: 20px; 
-}
-@media (min-width: 768px) {
-    .wish-grid { grid-template-columns: repeat(6, 1fr); gap: 12px; }
-}
-@media (min-width: 1024px) {
-    .wish-grid { grid-template-columns: repeat(8, 1fr); gap: 14px; }
-}
-
-/* HARDENED GRID FOR ICON LIBRARY FINDER */
-#lib-items-grid {
-    grid-template-columns: repeat(5, 1fr) !important;
-}
-@media (min-width: 768px) {
-    #lib-items-grid {
-        grid-template-columns: repeat(6, 1fr) !important;
+    .bio-title{
+        font-size:27px;
     }
-}
-@media (min-width: 1024px) {
-    #lib-items-grid {
-        grid-template-columns: repeat(8, 1fr) !important;
+
+    .subtitle{
+        font-size:11px;
     }
+
+    .link-title{
+        font-size:12px;
+    }
+
+    .link-description{
+        font-size:9px;
+    }
+
 }
 
-/* ITEM CARD LOOK */
-.reward-card { 
-    background-color: #0b0b0b; 
-    background-size: 100% 100% !important; 
-    background-position: center !important; 
-    border: 1px solid rgba(255, 255, 255, 0.12); 
-    border-radius: 12px; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: flex-start; 
-    padding-top: 6px; 
-    aspect-ratio: 1 / 1.35; 
-    position: relative; 
-    overflow: hidden; 
-    animation: itemPop 0.3s ease-out; 
-    box-shadow: 
-        inset 0 1px 1px rgba(255, 255, 255, 0.15), 
-        inset 0 0 12px rgba(0, 0, 0, 0.85), 
-        0 6px 15px rgba(0, 0, 0, 0.7); 
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, filter 0.35s ease;
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+
+    }
+
 }
-
-.reward-card img.card-item-img { 
-    width: 82% !important; 
-    height: 82% !important; 
-    max-width: 82% !important; 
-    max-height: 82% !important;
-    object-fit: contain !important; 
-    position: relative; 
-    z-index: 50; 
-    margin-top: 4px !important; 
-    pointer-events: none; 
-    transition: transform 0.3s ease;
-}
-
-.reward-card.is-removing {
-    opacity: 0.45;
-    filter: grayscale(70%) blur(0.5px);
-    pointer-events: none;
-}
-
-.reward-card.is-deleting { 
-    animation: none !important; 
-    transform: scale(0.01) rotate(-8deg) !important; 
-    opacity: 0 !important; 
-    box-shadow: none;
-    pointer-events: none;
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease !important;
-}
-
-.rare-plus::before { 
-    content: ""; 
-    position: absolute; 
-    inset: 0; 
-    background: 
-        linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.08) 41%, rgba(255,255,255,0.08) 45%, transparent 46%),
-        linear-gradient(135deg, transparent 55%, rgba(255,255,255,0.15) 56%, rgba(255,255,255,0.15) 62%, transparent 63%),
-        linear-gradient(135deg, transparent 75%, rgba(255,255,255,0.06) 76%, rgba(255,255,255,0.06) 78%, transparent 79%);
-    z-index: 1; 
-    pointer-events: none;
-}
-
-.id-bar { 
-    position: absolute; bottom: 0; left: 0; right: 0; background: #000; padding: 4px 0; 
-    border-top: 1px solid rgba(255,255,255,0.15); z-index: 60; display: flex; flex-direction: column; justify-content: center; align-items: center;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.8);
-    min-height: 38px;
-}
-.id-label { font-size: 8px; color: #a1a1aa; font-family: 'GFF-Bold'; font-style: italic; letter-spacing: 0.8px; }
-
-.input-mechanical { height: 69px; background: #000; border: 1px solid #1f1f1f; border-radius: 14px; box-shadow: 0 5px 0 #000; }
-
-/* AUTOCOMPLETE SUGGESTIONS DROPDOWN */
-.autocomplete-box {
-    position: absolute;
-    top: calc(100% + 6px);
-    left: 0;
-    right: 0;
-    background: #0d0d0d;
-    border: 1px solid #2a2a2a;
-    border-radius: 14px;
-    max-height: 280px;
-    overflow-y: auto;
-    z-index: 990;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-}
-
-.suggestion-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 12px;
-    border-bottom: 1px solid #1a1a1a;
-    cursor: pointer;
-    transition: background 0.15s ease;
-}
-.suggestion-item:last-child { border-bottom: none; }
-.suggestion-item:hover { background: #181818; }
-.suggestion-thumb {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-.suggestion-thumb img { width: 80%; height: 80%; object-fit: contain; }
-
-/* GLASS LOADER */
-#kelly-loader { 
-    position: fixed; 
-    inset: 0; 
-    background: rgba(0,0,0,0.7); 
-    backdrop-filter: blur(12px); 
-    -webkit-backdrop-filter: blur(12px);
-    z-index: 9999; 
-    display: none; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    transition: opacity 0.3s ease;
-}
-.loader-wrapper { position: relative; width: 160px; height: 160px; display: flex; align-items: center; justify-content: center; }
-.loader-ring { position: absolute; width: 100%; height: 100%; border: 3px solid rgba(255,222,0,0.05); border-top: 3px solid var(--ff-yellow); border-radius: 50%; animation: spin 0.8s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.status-window { background: #0d0d0d; border: 1px solid #222; margin-top: 20px; height: 70px; border-radius: 16px; display: flex; align-items: center; padding: 0 20px; opacity: 0; transition: 0.3s; gap: 15px; }
-.status-window.active { opacity: 1; }
-.progress-bar-small { height: 4px; background: #1a1a1a; border-radius: 2px; flex: 1; overflow: hidden; position: relative; }
-.progress-fill-small { position: absolute; left: 0; top: 0; height: 100%; background: var(--ff-yellow); width: 0%; transition: 0.2s; }
-
-.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 5000; display: none; align-items: center; justify-content: center; padding: 20px; }
-.modal-box { background: #0a0a0a; border: 2px solid #1f1f1f; border-top: 4px solid var(--ff-red); border-radius: 20px; padding: 30px; width: 100%; max-width: 400px; text-align: center; }
-
-/* SELECTION OVERLAYS */
-.search-card.is-selected, .reward-card.is-selected {
-    border-color: var(--ff-yellow) !important;
-    box-shadow: 0 0 15px rgba(255, 222, 0, 0.45);
-    transform: scale(0.96) !important; 
-}
-.reward-card.is-selected::after {
-    content: "\f00c"; 
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: var(--ff-yellow);
-    color: #000;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 9px;
-    z-index: 100;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-
-@keyframes itemPop { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
 </style>
 </head>
@@ -1474,32 +1348,22 @@ body::before {
 
 <div class="loader" id="loader">
 
-
     <img
         class="loading-logo"
         src="https://cdn.phototourl.com/free/2026-09-01-07f3fab6-7e0f-48b6-9bcf-30baf52df6cb.jpg"
         alt="FFVN.TGM"
     >
 
-
     <div class="loading-title">
-
-        FFVN.TGM
-        <span>🔥</span>
-
+        FFVN.TGM <span>🔥</span>
     </div>
-
 
     <div class="progress-box">
 
-
         <div class="progress-text">
-
             ĐANG KHỞI ĐỘNG...
             <span id="percent">1%</span>
-
         </div>
-
 
         <div class="progress-bar">
 
@@ -1510,32 +1374,24 @@ body::before {
 
         </div>
 
-
     </div>
-
 
 </div>
 
 
 <!-- =====================================================
-     BACKGROUNDS
+     4 BACKGROUNDS
 ===================================================== -->
 
 <div class="background">
 
-    <!-- BACKGROUND 1 -->
-
     <div class="bg bg1 active"></div>
-
-
-    <!-- BACKGROUND 2 -->
 
     <div class="bg bg2"></div>
 
-
-    <!-- BACKGROUND 3 -->
-
     <div class="bg bg3"></div>
+
+    <div class="bg bg4"></div>
 
 </div>
 
@@ -1561,7 +1417,6 @@ body::before {
 
 <main class="main">
 
-
 <section class="bio">
 
 
@@ -1577,9 +1432,7 @@ body::before {
     <!-- TITLE -->
 
     <h1 class="bio-title">
-
         BIO CỦA FFVN.TGM 🔥
-
     </h1>
 
 
@@ -1606,27 +1459,21 @@ body::before {
 
         <div class="info-card">
 
-
             <div class="info-icon">
                 👤
             </div>
 
-
             <div class="info-text">
-
 
                 <span class="info-label">
                     NICKNAME
                 </span>
 
-
                 <strong>
                     FFVN.TGM
                 </strong>
 
-
             </div>
-
 
         </div>
 
@@ -1635,30 +1482,23 @@ body::before {
 
         <div class="info-card">
 
-
             <div class="info-icon">
                 🆔
             </div>
 
-
             <div class="info-text">
-
 
                 <span class="info-label">
                     UID GAME
                 </span>
 
-
                 <strong>
                     12334445856
                 </strong>
 
-
             </div>
 
-
         </div>
-
 
     </div>
 
@@ -1668,18 +1508,14 @@ body::before {
     ================================================== -->
 
     <div class="separator">
-
         DANH SÁCH
-
     </div>
 
 
     <div class="links">
 
 
-        <!-- =================================================
-             ZALO - THÔNG BÁO FF
-        ================================================== -->
+        <!-- ZALO - THÔNG BÁO FF -->
 
         <a
             class="link"
@@ -1688,52 +1524,35 @@ body::before {
             rel="noopener noreferrer"
         >
 
-
             <div class="zalo-icon">
-
 
                 <img
                     src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Icon_of_Zalo.svg"
                     alt="Zalo"
                 >
 
-
             </div>
-
 
             <div class="link-text">
 
-
                 <span class="link-title">
-
                     NHÓM THÔNG BÁO FF
-
                 </span>
-
 
                 <span class="link-description">
-
                     Nhận thông báo & tin tức Free Fire
-
                 </span>
 
-
             </div>
-
 
             <div class="arrow">
-
                 ›
-
             </div>
-
 
         </a>
 
 
-        <!-- =================================================
-             ZALO - CHAT FF
-        ================================================== -->
+        <!-- ZALO - CHAT FF -->
 
         <a
             class="link"
@@ -1742,52 +1561,35 @@ body::before {
             rel="noopener noreferrer"
         >
 
-
             <div class="zalo-icon">
-
 
                 <img
                     src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Icon_of_Zalo.svg"
                     alt="Zalo"
                 >
 
-
             </div>
-
 
             <div class="link-text">
 
-
                 <span class="link-title">
-
                     NHÓM CHAT FF
-
                 </span>
-
 
                 <span class="link-description">
-
                     Giao lưu & trò chuyện cùng cộng đồng
-
                 </span>
 
-
             </div>
-
 
             <div class="arrow">
-
                 ›
-
             </div>
-
 
         </a>
 
 
-        <!-- =================================================
-             MESSENGER
-        ================================================== -->
+        <!-- MESSENGER -->
 
         <a
             class="link"
@@ -1796,47 +1598,30 @@ body::before {
             rel="noopener noreferrer"
         >
 
-
             <div class="icon messenger">
-
                 💬
-
             </div>
-
 
             <div class="link-text">
 
-
                 <span class="link-title">
-
                     NHÓM EVENT UPDATE
-
                 </span>
-
 
                 <span class="link-description">
-
                     Event & Update Free Fire
-
                 </span>
 
-
             </div>
-
 
             <div class="arrow">
-
                 ›
-
             </div>
-
 
         </a>
 
 
-        <!-- =================================================
-             AREXNETWORK
-        ================================================== -->
+        <!-- AREXNETWORK -->
 
         <a
             class="link"
@@ -1845,47 +1630,32 @@ body::before {
             rel="noopener noreferrer"
         >
 
-
             <img
                 class="custom-icon"
                 src="https://cdn.phototourl.com/free/2026-09-01-9e8750dc-2023-4879-8851-028b20c60730.jpg"
                 alt="Arexnetwork.vn"
             >
 
-
             <div class="link-text">
 
-
                 <span class="link-title">
-
                     AREXNETWORK.VN
-
                 </span>
-
 
                 <span class="link-description">
-
                     Website Arexnetwork.vn
-
                 </span>
 
-
             </div>
-
 
             <div class="arrow">
-
                 ›
-
             </div>
-
 
         </a>
 
 
-        <!-- =================================================
-             NHÀ SÁNG TẠO FREE FIRE
-        ================================================== -->
+        <!-- NHÀ SÁNG TẠO FREE FIRE -->
 
         <a
             class="link"
@@ -1894,40 +1664,27 @@ body::before {
             rel="noopener noreferrer"
         >
 
-
             <img
                 class="custom-icon"
                 src="https://dl.dir.freefiremobile.com/common/OB44/VN/WebUGC/Partner.jpg"
                 alt="Nhà Sáng Tạo Free Fire"
             >
 
-
             <div class="link-text">
 
-
                 <span class="link-title">
-
                     NHASANGTAO.FF.GARENA.VN
-
                 </span>
-
 
                 <span class="link-description">
-
                     Cổng thông tin Nhà Sáng Tạo Free Fire
-
                 </span>
 
-
             </div>
-
 
             <div class="arrow">
-
                 ›
-
             </div>
-
 
         </a>
 
@@ -1948,7 +1705,6 @@ body::before {
 
 
 </section>
-
 
 </main>
 
@@ -1973,13 +1729,10 @@ const loader =
 
 const loadingTimer = setInterval(() => {
 
-
     progress++;
-
 
     progressBar.style.width =
         progress + "%";
-
 
     percent.textContent =
         progress + "%";
@@ -1987,45 +1740,41 @@ const loadingTimer = setInterval(() => {
 
     if(progress >= 100){
 
-
         clearInterval(loadingTimer);
-
 
         setTimeout(() => {
 
-
             loader.classList.add("hide");
-
 
         },500);
 
-
     }
-
 
 },30);
 
 
 /* =====================================================
-   BACKGROUND TỰ ĐỘNG 6 GIÂY
+   BACKGROUND TỰ ĐỘNG 7 GIÂY
 ===================================================== */
 
 const backgrounds =
     document.querySelectorAll(".bg");
 
-
 let currentBackground = 0;
 
 
-setInterval(() => {
+/*
+   Chuyển background sau mỗi 7 giây.
+   Có 4 background:
+   1 → 2 → 3 → 4 → 1
+*/
 
+setInterval(() => {
 
     backgrounds[currentBackground]
         .classList.remove("active");
 
-
     currentBackground++;
-
 
     if(
         currentBackground >=
@@ -2036,12 +1785,10 @@ setInterval(() => {
 
     }
 
-
     backgrounds[currentBackground]
         .classList.add("active");
 
-
-},6000);
+},7000);
 
 
 /* =====================================================
@@ -2054,35 +1801,27 @@ const particles =
 
 for(let i = 0; i < 35; i++){
 
-
     const particle =
         document.createElement("div");
-
 
     particle.className =
         "particle";
 
-
     particle.style.left =
         Math.random() * 100 + "%";
-
 
     particle.style.animationDuration =
         (5 + Math.random() * 10) + "s";
 
-
     particle.style.animationDelay =
         (-Math.random() * 10) + "s";
-
 
     particle.style.opacity =
         (0.15 + Math.random() * 0.5);
 
-
     particles.appendChild(
         particle
     );
-
 
 }
 
@@ -2090,4 +1829,4 @@ for(let i = 0; i < 35; i++){
 
 
 </body>
-               </html>
+   </html>
